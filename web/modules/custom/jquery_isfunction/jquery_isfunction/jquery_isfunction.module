@@ -1,0 +1,27 @@
+<?php
+/**
+ * @file
+ * Primary module hooks for jQuery - isFunction Shim module.
+ */
+
+/**
+ * 
+ * Implements hook_page_attachments()
+ */
+function jquery_isfunction_page_attachments(array &$page) {
+  $page['#attached']['library'][] = 'jquery_isfunction/global-scripts';
+}
+
+/**
+ * Implements hook_library_info_alter().
+ *
+ * Declare libraries on behalf of sub-modules.
+ */
+function jquery_isfunction_library_info_alter(array &$libraries, string $extension): void {
+    
+}
+
+function jquery_isfunction_js_alter(&$javascript, \Drupal\Core\Asset\AttachedAssetsInterface $assets, \Drupal\Core\Language\LanguageInterface $language) {
+    $x = 'noice';
+    
+}

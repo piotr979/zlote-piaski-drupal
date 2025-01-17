@@ -1,0 +1,23 @@
+name: sea_trips
+type: theme
+'base theme': stable9
+version: 1.0.0
+libraries:
+  - sea_trips/base
+  - sea_trips/messages
+  - sea_trips/global-scripts
+  - sea_trips/styles
+libraries-extend:
+  user/drupal.user:
+    - sea_trips/user
+  core/drupal.dropbutton:
+    - sea_trips/dropbutton
+  core/drupal.dialog:
+    - sea_trips/dialog
+  file/drupal.file:
+    - sea_trips/file
+  core/drupal.progress:
+    - sea_trips/progress
+description: ''
+core_version_requirement: ^11
+generator: 'starterkit_theme:11.1.1'

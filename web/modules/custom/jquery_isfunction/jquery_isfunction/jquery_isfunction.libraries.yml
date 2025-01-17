@@ -1,0 +1,7 @@
+global-scripts:
+  version: 1.x
+  header: true
+  js: 
+    js/jquery.isfunction.js: { minified: false, preprocess: false, weight: -20}
+  dependencies:
+    - core/jquery

@@ -1,0 +1,7 @@
+name: 'Customs'
+type: module
+core_version_requirement: ^11
+description: 'Provides a custom blocks and content'
+package: Custom
+dependencies:
+  - drupal:block

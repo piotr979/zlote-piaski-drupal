@@ -1,0 +1,9 @@
+{
+    "extends": [
+        "../../../core/.stylelintrc.json",
+        "stylelint-config-tailwindcss"
+    ],
+    "ignoreFiles": [
+        "build/*.css"
+    ]
+}

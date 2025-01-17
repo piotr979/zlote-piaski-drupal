@@ -1,0 +1,9 @@
+name: 'jQuery - isFunction Shim'
+type: module
+description: 'As of jQuery 3.3 isFunction() was removed. However 1000s of libraries rely on this function. This module provides a shim alias to the optimized variant.'
+package: Custom
+core_version_requirement: ^10 || ^11
+version: 4.0.0-beta2
+
+libraries:
+  - jquery_isfunction/global-scripts
