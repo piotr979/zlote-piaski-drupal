@@ -9,11 +9,13 @@ module.exports = {
           'accent-light-color': "#C1D4EF",
           'dark-bg-color': '#0F1329',
           'primary-btn-color': '#9ED3FF',
-          'secondary-btn-color': '#EBE1AA'
+          'primary-btn-hov-color': '#AEE3FF',
+          'secondary-btn-color': '#EBE1AA',
+          'secondary-btn-hov-color': '#FBF1BA',
   
         },
         fontFamily: {
-          'main-normal': ['Jost'],
+          'main': ['Jost'],
           'heading': ['Magra'],
         },
       },
