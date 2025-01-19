@@ -12,6 +12,8 @@ module.exports = {
           'primary-btn-hov-color': '#AEE3FF',
           'secondary-btn-color': '#EBE1AA',
           'secondary-btn-hov-color': '#FBF1BA',
+          'infoicon': '#BCE3FF',
+          'infophoto-link': '#568AC6'
   
         },
         fontFamily: {
