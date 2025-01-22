@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+
 /**
  * @file
  * Functions to support theming.
@@ -29,7 +31,33 @@ function sea_trips_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\Fo
       '#type' => 'color',
       '#title' => new \Drupal\Core\StringTranslation\TranslatableMarkup('Custom Color'),
       '#default_value' => theme_get_setting('primary_color'),
-      '#description' => new \Drupal\Core\StringTranslation\TranslatableMarkup('Select a custom theme color.'),
+      '#description' => new TranslatableMarkup('Select a custom theme color.'),
+    ];
+    $form['phone_number'] = [
+      '#type' => 'textfield',
+      '#title' => new TranslatableMarkup('Phone number'),
+      '#default_value' => theme_get_setting('phone_number'),
+      '#description' => new TranslatableMarkup('Set phone number used on the page.')
+    ];
+    $form['street_name'] = [
+      '#type' => 'textfield',
+      '#title' => new \Drupal\Core\StringTranslation\TranslatableMarkup('Street Name'),
+      '#default_value' => theme_get_setting('street_name'),
+      '#description' => new \Drupal\Core\StringTranslation\TranslatableMarkup('Street name for contact information.'),
+    ];
+  
+    $form['city_name'] = [
+      '#type' => 'textfield',
+      '#title' => new \Drupal\Core\StringTranslation\TranslatableMarkup('City Name'),
+      '#default_value' => theme_get_setting('city_name'),
+      '#description' => new \Drupal\Core\StringTranslation\TranslatableMarkup('City name for contact information.'),
+    ];
+  
+    $form['zip_code'] = [
+      '#type' => 'textfield',
+      '#title' => new \Drupal\Core\StringTranslation\TranslatableMarkup('Zip Code'),
+      '#default_value' => theme_get_setting('zip_code'),
+      '#description' => new \Drupal\Core\StringTranslation\TranslatableMarkup('Zip code for contact information.'),
     ];
   }
 

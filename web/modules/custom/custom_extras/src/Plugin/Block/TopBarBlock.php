@@ -23,7 +23,6 @@ class TopBarBlock extends BlockBase implements BlockPluginInterface {
      
       // Get configuration.
       $config = $this->getConfiguration();
-  
       // Build block content.
       return [
         '#markup' => '<div class="hidden md:block md:border-b border-gray-10 pb-2 my-1" ><div class="container hidden md:flex flex-row mx-auto justify-between text-xs"><p>Witamy w Złotych Piaskach</p>' .

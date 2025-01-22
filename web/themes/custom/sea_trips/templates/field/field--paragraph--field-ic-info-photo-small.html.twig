@@ -54,9 +54,9 @@
 %}
 {% if label_hidden %}
   {% if multiple %}
-    <div{{ attributes.addClass(classes, 'field__items grid grid-rows-2 grid-cols-1 sm:grid-cols-2 justify-items-center w-full') }}>
+    <div{{ attributes.addClass(classes, 'field__items grid grid-rows-2 grid-cols-1 sm:grid-cols-2 items-center w-full h-full') }}>
       {% for item in items %}
-        <div{{ item.attributes.addClass('field__item mb-8') }}>{{ item.content }}</div>
+        <div{{ item.attributes.addClass('field__item mb-4 sm:mb-2') }}>{{ item.content }}</div>
       {% endfor %}
     </div>
   {% else %}

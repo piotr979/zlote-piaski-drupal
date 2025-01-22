@@ -1,0 +1,5 @@
+header_title_styles:
+  version: 1.x
+  css:
+    theme:
+      css/header_title_block.css: {}

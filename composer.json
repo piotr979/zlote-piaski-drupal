@@ -23,6 +23,7 @@
         "drupal/devel": "^5.3",
         "drupal/field_group": "^4.0@alpha",
         "drupal/focal_point": "^2.1",
+        "drupal/google_map_field": "^2.0",
         "drupal/imageapi_optimize": "^4.1@beta",
         "drupal/imageapi_optimize_binaries": "^1.1@beta",
         "drupal/metatag": "^2.1",

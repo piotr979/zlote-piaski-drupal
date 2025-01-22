@@ -10,6 +10,13 @@
  * @see template_preprocess_form()
  */
 #}
-<form{{ attributes }}>
+{%
+set classes = [
+  'container',
+  'mx-auto'
+]
+%}
+
+<form{{ attributes.addClass(classes) }}>
   {{ children }}
 </form>

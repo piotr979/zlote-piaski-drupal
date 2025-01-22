@@ -1,0 +1,21 @@
+<div class="footer-block mt-4 relative overflow-hidden  bg-dark-bg-color">
+  <div class="container flex flex-col md:flex-row py-8 mx-auto">
+    <div class="column flex-1">
+      <h3 class="text-white text-xl mb-4">{{ content['#header1'] }}</h3>
+      <p class="text-gray-300 w-64">{{ content['#text1'] }}</p>
+    </div>
+    <div class="column flex-1">
+      <h3 class="text-white text-xl mb-4">{{ content['#header2'] }}</h3>
+      <ul class="text-gray-300 space-y-2">
+        {% for link in content['#links'] %}
+          <li class="hover:underline">{{ link }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="column flex-1">
+      <h3 class="text-white text-xl mb-4">{{ content['#header3'] }}</h3>
+      <p class="text-gray-300">{{ content['#address'] }}</p>
+      <p class="text-gray-300 mt-4">Telefon: {{ content['#phone'] }}</p>
+    </div>
+  </div>
+</div>

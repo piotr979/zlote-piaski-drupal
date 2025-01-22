@@ -5,18 +5,90 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .info-button {
+        @apply absolute text-white hover:text-infophoto-link transition-all duration-100 hover:bg-white text-center block uppercase text-sm bg-infophoto-link top-4 right-2 px-2 py-1;
+    }
+
+    .image-subtitle {
+        @apply absolute text-white text-center left-0 right-0 bottom-0 bg-black bg-opacity-60 leading-8 uppercase font-medium;
+    }
+}
+
 html {
     font-family: 'Jost';
 }
-h1,h2,h3,h4,h5,h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Magra';
+}
+h2 {
+    font-size: 2rem;
 }
 #main-menu .menu-item:hover,
 #main-menu .menu-item:hover a.is-active {
     color: #275CA8;
 }
+
 @media (max-width: 48rem) {
     a.is-active {
         color: white;
     }
+}
+
+.footer-block {
+    position: relative;
+}
+
+.footer-block::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/footer_background.jpeg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.03;
+    z-index: 1;
+}
+
+.header-title-block h3 {
+    margin: 0;
+    font-size: 1.75rem;
+}
+.photoswipe {
+    padding: 1rem;
+}
+a.photoswipe img {
+    padding: 8px;
+    border: 1px solid #ededed;
+    border-radius: 8px;
+    transition: all .4s;
+}
+a.photoswipe img:hover {
+    transform: scale(1.03);
+}
+
+.contact-message-kontakt-form input[type="email"], 
+.contact-message-kontakt-form textarea, 
+.contact-message-kontakt-form input[type="text"] {
+    border: 1px solid #cccccc;
+}
+.contact-message-kontakt-form #edit-preview,
+.contact-message-kontakt-form #edit-submit {
+    padding: .5rem 1rem .5rem 1rem;
+    border-radius: 5px;
+}
+.contact-message-kontakt-form #edit-submit {
+    @apply bg-primary-btn-color;
+}
+
+.contact-message-kontakt-form #edit-preview {
+    @apply bg-secondary-btn-color;
 }
