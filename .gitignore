@@ -3,8 +3,12 @@
 /web/sites/*/translations
 /web/sites/*/tmp
 /web/sites/*/cache
-/web/sites/*/files/2025-01/*.jpg
-/web/sites/*/files/styles/
+# Ignore paths that may contain user-generated content
+/web/sites/*/files
+/web/sites/*/public
+/web/sites/*/private
+/web/sites/*/files-public
+/web/sites/*/files-private
 .ddev
 # Ignore drupal core (if not versioning drupal sources)
 node_modules
