@@ -4,6 +4,7 @@
 /web/sites/*/tmp
 /web/sites/*/cache
 /web/sites/*/files/2025-01/*.jpg
+/web/sites/*/files/styles/
 .ddev
 # Ignore drupal core (if not versioning drupal sources)
 node_modules
