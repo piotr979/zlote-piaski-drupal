@@ -1,0 +1,9 @@
+name: Owl slider with Text
+type: module
+description: 'Provides a View display style that renders slides'
+package: Views
+core_version_requirement: ^11
+dependencies:
+  - core:views
+libraries:
+  - owl_slider/animatejs

@@ -1,0 +1,13 @@
+{{ attach_library('owl_slider/animatejs') }}
+<div class="custom-slider">
+  {% for row in rows %}
+    <div class="slide" style="background-image: url('{{ file_url(row['#node'].field_sl_image.entity.uri.value) }}');">
+      <div class="slide-caption animate__animated animate__slideInUp">
+        {{ row['#node'].field_sl_text.value }}
+      </div>
+    </div>
+  {% else %}
+    <p>No slides available</p>
+  {% endfor %}
+
+</div>

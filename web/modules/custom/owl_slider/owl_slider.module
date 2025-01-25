@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function owl_slider_theme($existing, $type, $theme, $path) {
+  return array(
+    'owl_slider' => array(
+      'variables' => array('view' => NULL, 'rows' => NULL),
+      'path' => \Drupal::service('extension.list.module')->getPath('owl_slider') . '/templates',
+    ),
+  );
+}
