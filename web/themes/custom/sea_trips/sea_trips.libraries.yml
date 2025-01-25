@@ -111,10 +111,3 @@ styles:
   css:
     theme:
       build/styles.css: {}
-slider:
-  version: 1.0
-  js:
-    js/slider/slider.js: {}
-  css:
-    theme:
-      js/slider/css/styles.css: {}

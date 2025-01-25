@@ -6,7 +6,6 @@ libraries:
   - sea_trips/base
   - sea_trips/messages
   - sea_trips/global-scripts
-  - sea_trips/slider
   - sea_trips/styles
 libraries-extend:
   user/drupal.user:
