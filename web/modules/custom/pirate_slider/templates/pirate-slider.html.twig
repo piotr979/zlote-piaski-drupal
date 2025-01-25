@@ -1,0 +1,12 @@
+<div class="pirate-slider">
+  {% for row in rows %}
+    <div class="slide" style="background-image: url('{{ file_url(row['#row']._entity.field_sl_image.entity.uri.value) }}');">
+    <div class="backdrop"></div>
+      <div class="slide-caption animate__animated animate__slideInUp">
+        {{ row['#row']._entity.field_sl_text.value }}
+      </div>
+    </div>
+  {% else %}
+    <p>No slides available</p>
+  {% endfor %}
+</div>

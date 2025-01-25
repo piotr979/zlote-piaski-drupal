@@ -1,0 +1,10 @@
+name: Pirate slider
+type: module
+description: 'Provides a View display style that renders slides'
+package: Views
+core_version_requirement: ^11
+dependencies:
+  - core:views
+libraries:
+  - pirate_slider/animate-css
+  - pirate_slider/pirate-slider
