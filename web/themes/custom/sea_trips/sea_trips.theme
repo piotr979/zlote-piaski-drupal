@@ -63,7 +63,34 @@ function sea_trips_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\Fo
 
   function sea_trips_preprocess_paragraph(array &$variables) {
     $paragraph = $variables['paragraph'];
+    if ($paragraph->bundle() === 'pricing_table') {
+    
+      if ($paragraph->hasField('field_pt_background_color')) {
+        $color = $paragraph->get('field_pt_background_color')->getValue()[0]['value'] ?? '' ;
 
+        $bg_color = 'bg-pricing-bg-';
+        $btn_color = 'bg-pricing-btn-';
+        switch ($color) {
+          case 'orangish':  
+            $bg_color .= '1';
+            $btn_color .= '1';
+            break;
+          case 'blueish':
+            $bg_color .= '2';
+            $btn_color .= '2';
+            break;
+          case 'pinky':
+            $bg_color .= '3';
+            $btn_color .= '3';
+            break;
+          default:
+            $bg_color .= '1';
+            $btn_color .= '1';
+      }
+      $variables['bg_color'] = $bg_color;
+      $variables['btn_color'] = $btn_color;
+    }
+  }
     if ($paragraph->bundle() === 'akapit_informacyjny') {
         // Check if the paragraph has the field `field_st_background_color`
         if ($paragraph->hasField('field_st_background_color') && !$paragraph->get('field_st_background_color')->isEmpty()) {
@@ -90,4 +117,9 @@ function isColorDarker(string $color = '#FFFFFF', string $referenceColor = '#888
   $colorLuminance = 0.299 * $colorRgb[0] + 0.587 * $colorRgb[1] + 0.114 * $colorRgb[2];
   $referenceLuminance = 0.299 * $referenceRgb[0] + 0.587 * $referenceRgb[1] + 0.114 * $referenceRgb[2];
   return $colorLuminance < $referenceLuminance;
+}
+
+function sea_theme_preprocess_page(array &$variables) {
+  // Attach the Owl Carousel library
+  $variables['#attached']['library'][] = 'sea_trips/owlcarousel';
 }

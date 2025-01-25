@@ -1,0 +1,40 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ */
+#}
+{%
+  set classes = [
+    'flex',
+    'flex-col',
+    'paragraph',
+    'gap-x-4',
+	'h-full',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+{% block paragraph %}
+  <div{{ attributes.addClass(classes, bg_color, 'rounded-tr-4xl', 'p-4 pt-8') }}>
+
+    {% block content %}
+      <div class="flex flex-row justify-between">
+        <div class="text-base font-main font-medium">{{ content.field_pt_title }}</div>
+        {{ content.field_pt_icon }}
+      </div>
+      <div class="flex flex-row font-main mt-4">
+        <div class="text-6xl font-medium">{{ content.field_pt_price }}</div>
+        <div class="font-base text-sm ml-4">{{ content.field_pt_text_next_to_price }}</div>
+      </div>
+	    <div class="text-xs leading-6 mt-4">{{ content.field_description }}</div>
+      <div class="mt-auto">  
+        <div class="block {{ btn_color }}  text-white text-center rounded-xl hover:text-black px-8 py-2 mt-4 mx-4 ">{{ content.field_pt_cta_link }}</div>
+        <div class="mt-4 text-xs">{{ content.field_pt_text_under_button }}</div>
+      </div> 
+    {% endblock content %} <!-- Properly closing the "content" block -->
+
+  </div> <!-- Closing the paragraph container div -->
+{% endblock paragraph %} <!-- Closing the "paragraph" block -->
