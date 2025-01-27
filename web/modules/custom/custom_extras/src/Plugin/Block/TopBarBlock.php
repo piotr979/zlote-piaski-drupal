@@ -25,7 +25,7 @@ class TopBarBlock extends BlockBase implements BlockPluginInterface {
       $config = $this->getConfiguration();
       // Build block content.
       return [
-        '#markup' => '<div class="hidden md:block md:border-b border-gray-10 pb-2 my-1" ><div class="container hidden md:flex flex-row mx-auto justify-between text-xs"><p>Witamy w Złotych Piaskach</p>' .
+        '#markup' => '<div class="hidden md:block md:border-b border-gray-10 pb-2 my-1" ><div class="container hidden md:flex flex-row mx-auto justify-between text-xs"><p>' . $this->t("Witamy w Złotych Piaskach") . '</p>' .
         '<div class="flex flex-row"><p class="me-4">' . $this->t("Rezerwacje i pytania") . ': ' . $config['phone_number'] . '</p>' .
           '<p>ul. Wiosenna 3, 76 - 150 Darłowo</p></div></div></div>',
          

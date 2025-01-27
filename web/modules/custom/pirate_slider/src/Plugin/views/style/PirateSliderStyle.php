@@ -41,6 +41,7 @@ class PirateSliderStyle extends StylePluginBase {
     public function render() {
         // Attach the required libraries to the view.
         // We attach the libraries to the current render array.
+        
         $this->view->element['#attached']['library'][] = 'pirate_slider/pirate-slider';
         $this->view->element['#attached']['library'][] = 'pirate_slider/animate-css';
 

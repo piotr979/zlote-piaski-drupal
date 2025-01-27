@@ -1,4 +1,30 @@
 <?php
+use Drupal\views\ViewExecutable;
+use Drupal\views\Plugin\views\display\DisplayPluginBase;
+
+/**
+ * Implements hook_preprocess_views_view().
+ */
+function pirate_slider_preprocess_views_view(array &$variables) {
+  // Check if this is the correct view and block.
+  if ($variables['view']->id() === 'pirate_slider' && $variables['view']->current_display === 'block_1') {
+    // Iterate over the rows to check translations.
+    foreach ($variables['view']->result as &$row) {
+      if ($row->_entity instanceof \Drupal\node\Entity\Node) {
+        $node = $row->_entity;
+        $current_lang = \Drupal::languageManager()->getCurrentLanguage()->getId();
+
+        // Check if translation exists and get it.
+        if ($node->hasTranslation($current_lang)) {
+          $node = $node->getTranslation($current_lang);
+        }
+
+        // Ensure View gets the correct translation.
+        $row->_entity = $node;
+      }
+    }
+  }
+}
 
 /**
  * Implements hook_theme().

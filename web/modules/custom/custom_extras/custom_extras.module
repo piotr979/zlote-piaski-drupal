@@ -1,0 +1,24 @@
+<?php 
+
+use Drupal\Core\Url;
+/**
+ * Implements hook_language_switch_links_alter().
+ *
+ */
+function custom_extras_general_language_switch_links_alter(array &$links, $type, \Drupal\Core\Url $url) {
+  exit();
+  foreach ($links as &$link){
+      $link['title'] = $link['language']->id();
+  }
+}
+/**
+ * Implements hook_language_switch_links_alter().
+ */
+function custom_extras_langcode_language_switch_links_alter(array &$links, string $type, Url $url): void {
+    exit();
+    foreach ($links as $langcode => &$link) {
+      $link['attributes']['title'] = $link['title'];
+      $link['title'] = strtoupper($langcode);
+    }
+  }
+  

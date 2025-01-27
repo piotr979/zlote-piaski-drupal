@@ -31,9 +31,9 @@
 	{% import _self as menus %}
 	{% if items %}
 		{% if menu_level == 0 %}
-			<button id="toggle-mobile-nav" class="md:hidden text-6xl pe-2 md:pe-0 block">
-				<p class="open-mobile-nav text-4xl text-black ">&#9776;</p>
-				<p class="close-mobile-nav text-6xl text-white leading-8">&times;</p>
+			<button id="toggle-mobile-nav" class="lg:hidden text-6xl  block">
+				<p class="open-mobile-nav text-4xl text-black pe-2 md:pe-4">&#9776;</p>
+				<p class="close-mobile-nav text-6xl text-white leading-8 -me-8">&times;</p>
 				<!-- Burger icon -->
 			</button>
 			<ul{{attributes.addClass('menu').setAttribute('id','main-menu')}}>

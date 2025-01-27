@@ -38,7 +38,7 @@ body {
     display: flex;
     gap: 4rem;
 }
-@media (max-width: 48rem) {
+@media (max-width: 64rem) {
     #menu-toggle {
         display: block;
     }
@@ -58,6 +58,7 @@ body {
         color: white;
         margin: 0;
         gap: 0;
+        font-size: 2rem;
         flex-direction: column;
         padding-top: 5rem;
         align-items: center;

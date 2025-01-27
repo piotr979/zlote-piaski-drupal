@@ -1,0 +1,7 @@
+name: 'Language Switcher'
+type: module
+description: 'Provides a block with language switcher buttons.'
+core_version_requirement: ^11
+package: Custom
+dependencies:
+  - drupal:language

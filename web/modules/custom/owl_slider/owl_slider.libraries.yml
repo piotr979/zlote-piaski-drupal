@@ -1,6 +1,0 @@
-animatejs:
-  version: 1.0
-  css:
-    theme:
-      https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css: 
-        type: external

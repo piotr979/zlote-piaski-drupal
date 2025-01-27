@@ -93,3 +93,7 @@ a.photoswipe img:hover {
     @apply bg-secondary-btn-color;
 }
 
+.language-switcher-language-url select {
+    text-transform: uppercase;
+    cursor: pointer;
+}

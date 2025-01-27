@@ -119,7 +119,4 @@ function isColorDarker(string $color = '#FFFFFF', string $referenceColor = '#888
   return $colorLuminance < $referenceLuminance;
 }
 
-function sea_theme_preprocess_page(array &$variables) {
-  // Attach the Owl Carousel library
-  $variables['#attached']['library'][] = 'sea_trips/owlcarousel';
-}
+
