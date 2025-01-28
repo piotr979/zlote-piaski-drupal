@@ -50,6 +50,11 @@ public function build() {
 
   $title = \Drupal::service('title_resolver')->getTitle($request, $route);
 
+  if (is_array($title)) {
+    // If title is an array, take the first element as the title (or handle it accordingly)
+    $title = reset($title);
+  }
+
   if (empty($title)) {
     $title = 'Home'; // Default title for the front page.
   }
@@ -58,4 +63,5 @@ public function build() {
     '#markup' => '<div class="header-title-block py-1 md:py-8 text-center text-white"><h3>' . htmlspecialchars($title) . '</h3></div>',
   ];
 }
+
 }
