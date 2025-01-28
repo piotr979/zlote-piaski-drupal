@@ -97,3 +97,26 @@ a.photoswipe img:hover {
     text-transform: uppercase;
     cursor: pointer;
 }
+#user-login-form {
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+#user-login-form .form-submit {
+    background-color: black;
+    color: white;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+#user-login-form label {
+    padding-bottom: .5rem;
+}
+
+#user-login-form .form-text {
+    background-color: white;
+    border: 1px solid #666;
+    border-radius: 5px;
+    padding: .5rem 1rem;
+}
