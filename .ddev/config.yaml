@@ -3,6 +3,7 @@ type: drupal
 docroot: web
 php_version: "8.3"
 webserver_type: nginx-fpm
+router_http_port: "84"
 xdebug_enabled: false
 additional_hostnames: []
 additional_fqdns: []
@@ -41,7 +42,7 @@ corepack_enable: true
 #   MySQL versions can be 5.5-8.0.
 #   PostgreSQL versions can be 9-16.
 
-router_http_port: 84  # Port to be used for http (defaults to global configuration, usually 80)
+# router_http_port: <port>  # Port to be used for http (defaults to global configuration, usually 80)
 # router_https_port: <port> # Port for https (defaults to global configuration, usually 443)
 
 # xdebug_enabled: false  # Set to true to enable Xdebug and "ddev start" or "ddev restart"

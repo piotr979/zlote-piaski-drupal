@@ -43,26 +43,29 @@ class FooterBlock extends BlockBase implements BlockPluginInterface {
       }
     }
     $phone_number = theme_get_setting('phone_number') ?: '0000';
-    $street_name = theme_get_setting('street_name') ?: 'Unknown Street';  // Default value if null
-    $city_name = theme_get_setting('city_name') ?: 'Unknown City';        // Default value if null
-    $zip_code = theme_get_setting('zip_code') ?: '00000';                // Default value if null
-    
+    // Default value if null.
+    $street_name = theme_get_setting('street_name') ?: 'Unknown Street';
+    // Default value if null.
+    $city_name = theme_get_setting('city_name') ?: 'Unknown City';
+    // Default value if null.
+    $zip_code = theme_get_setting('zip_code') ?: '00000';
+
     $address = $this->t('@street_name<br>@zip_code @city_name', [
-        '@street_name' => $street_name,
-        '@zip_code' => $zip_code,
-        '@city_name' => $city_name,
+      '@street_name' => $street_name,
+      '@zip_code' => $zip_code,
+      '@city_name' => $city_name,
     ]);
-    
+
     return [
-        '#theme' => 'footer_block',
-        '#header1' => $this->t('O nas')->__toString(),
-        '#text1' => $this->t('Nasz obiekt położony jest nad Morzem Bałtyckim i oferuje pokoje gościnne w atrakcyjnych cenach.')->__toString(),
-        '#header2' => $this->t('Linki')->__toString(),
-        '#links' => $links,
-        '#header3' => $this->t('Dane kontaktowe')->__toString(),
-        '#address' => $address,
-        '#phone' => $phone_number,
-    ];   
+      '#theme' => 'footer_block',
+      '#header1' => $this->t('O nas')->__toString(),
+      '#text1' => $this->t('Nasz obiekt położony jest nad Morzem Bałtyckim i oferuje pokoje gościnne w atrakcyjnych cenach.')->__toString(),
+      '#header2' => $this->t('Linki')->__toString(),
+      '#links' => $links,
+      '#header3' => $this->t('Dane kontaktowe')->__toString(),
+      '#address' => $address,
+      '#phone' => $phone_number,
+    ];
   }
 
   /**
@@ -81,4 +84,5 @@ class FooterBlock extends BlockBase implements BlockPluginInterface {
   public function blockSubmit($form, FormStateInterface $form_state) {
     parent::blockSubmit($form, $form_state);
   }
+
 }
