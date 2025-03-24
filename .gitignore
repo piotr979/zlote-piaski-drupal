@@ -16,6 +16,7 @@ node_modules
 /web/core
 /web/modules/README.txt
 /web/profiles/README.txt
+/web/modules/contrib
 /web/sites/development.services.yml
 /web/sites/example.settings.local.php
 /web/sites/example.sites.php
