@@ -14,19 +14,28 @@
 #}
 {%
   set classes = [
-    'flex',
-    'flex-row',
     'justify-between',
     'content-center',
     'lg:container',
     'items-center',
     'mx-auto',
+    'flex',
+    'flex-row',
+    'md:block',
     'region',
+    'go-front',
     'region-' ~ region|clean_class,
   ]
 %}
+
+{% if not is_pirate_slider %}
+{% set header_background_url = 'themes/custom/sea_trips/images/dk_background.jpg' %}
+{% endif %}
+
 {% if content %}
-  <div{{ attributes.addClass(classes) }}>
-    {{ content }}
-  </div>
+	<div {% if header_background_url is defined %} class="pb-4 -mt-10 pt-10" style="background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4)), url('{{ header_background_url }}'); background-size: cover; background-position: center; padding-bottom: 4rem;" {% endif %}>
+		<div{{attributes.addClass(classes)}}>
+			{{ content }}
+		</div>
+	</div>
 {% endif %}

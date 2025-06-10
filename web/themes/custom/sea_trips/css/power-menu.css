@@ -35,10 +35,12 @@ body {
 }
 #main-menu {
     flex-direction: row;
+    justify-content: center;
     display: flex;
     gap: 4rem;
+    color: white;
 }
-@media (max-width: 64rem) {
+@media (max-width: 48rem) {
     #menu-toggle {
         display: block;
     }
@@ -73,6 +75,8 @@ body {
         color: white;
     }
 }
+
+
 .close-mobile-nav {
     position: relative;
     z-index: 1000;

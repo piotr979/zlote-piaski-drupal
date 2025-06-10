@@ -38,13 +38,14 @@
                 </div>
             {% endif %}
 
-            <div class="{{ is_dark ? 'text-white' : 'text-black' }} font-heading text-4xl mt-2 text-center 
+         <img src="{{ file_url('themes/custom/sea_trips/images/lighthouse.png') }}" alt="Lighthouse">
+            <div class="{{ is_dark ? 'text-white' : 'text-black' }} -mt-16 font-heading text-4xl text-center 
                 {{ content.field_st_image|render ? 'md:text-left' : '' }}">
                 {{ content.field_st_title }}
             </div>
 
             <div class="{{ is_dark ? 'text-white' : 'text-gray-500' }} text-base leading-6 text-center 
-                {{ content.field_st_image|render ? 'md:text-left' : '' }} pt-8">
+                {{ content.field_st_image|render ? 'md:text-left' : '' }} pt-16">
                 {{ content.field_st_description }}
             </div>
 

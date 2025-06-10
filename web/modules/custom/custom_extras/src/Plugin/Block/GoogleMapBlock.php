@@ -26,7 +26,7 @@ class GoogleMapBlock extends BlockBase {
 
         return [
             '#markup' => '<div class="googlemap">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d558.528889392903!2d16.400974306313245!3d54.42624676948156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fe2bfe24f24b93%3A0x4f0098323e75b162!2sZ%C5%82ote+Piaski!5e0!3m2!1spl!2sus!4v1559893874579!5m2!1spl!2sus" width="1920" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19690.87739909004!2d16.32163647005269!3d54.38853226003663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fe2a7db9d21627%3A0xe3a0fe42bee228f2!2sPodkowa%20Le%C5%9Bna%2015%2C%2076-156%20Bobolin%2C%20Poland!5e0!3m2!1sen!2sie!4v1622024240282!5m2!1sen!2sie" width="1920" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>',
             '#allowed_tags' => ['div', 'iframe'], // Security: Allow only necessary tags.
         ];

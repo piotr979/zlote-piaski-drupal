@@ -15,8 +15,9 @@
 #}
 {% block content %}
   {% if site_logo %}
-    <a href="{{ path('<front>') }}" rel="home" class="site-logo">
-      <img class="w-64 mx-auto md:mx-0" src="{{ site_logo }}" alt="{{ 'Home'|t }}" fetchpriority="high" />
+    <a href="{{ path('<front>') }}" rel="home" class="site-logo flex flex-row md:block items-center pt-4">
+      <img class="md:mx-auto" src="{{ site_logo }}" alt="{{ 'Home'|t }}" fetchpriority="high" />
+      <p class="uppercase text-xl md:text-2xl ms-2 md:ms-0 lg:pt-2 font-medium text-white md:text-center block">Domki kapitana</p>
     </a>
   {% endif %}
   {% if site_name %}

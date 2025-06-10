@@ -59,7 +59,7 @@ class FooterBlock extends BlockBase implements BlockPluginInterface {
     return [
       '#theme' => 'footer_block',
       '#header1' => $this->t('O nas')->__toString(),
-      '#text1' => $this->t('Nasz obiekt położony jest nad Morzem Bałtyckim i oferuje pokoje gościnne w atrakcyjnych cenach.')->__toString(),
+      '#text1' => $this->t('Nasz obiekt położony jest nad Morzem Bałtyckim i oferuje domki w atrakcyjnych cenach.')->__toString(),
       '#header2' => $this->t('Linki')->__toString(),
       '#links' => $links,
       '#header3' => $this->t('Dane kontaktowe')->__toString(),

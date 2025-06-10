@@ -27,9 +27,11 @@ h5,
 h6 {
     font-family: 'Magra';
 }
+
 h2 {
     font-size: 2rem;
 }
+
 #main-menu .menu-item:hover,
 #main-menu .menu-item:hover a.is-active {
     color: #275CA8;
@@ -62,29 +64,34 @@ h2 {
     margin: 0;
     font-size: 1.75rem;
 }
+
 .photoswipe {
     padding: 1rem;
 }
+
 a.photoswipe img {
     padding: 8px;
     border: 1px solid #ededed;
     border-radius: 8px;
     transition: all .4s;
 }
+
 a.photoswipe img:hover {
     transform: scale(1.03);
 }
 
-.contact-message-kontakt-form input[type="email"], 
-.contact-message-kontakt-form textarea, 
+.contact-message-kontakt-form input[type="email"],
+.contact-message-kontakt-form textarea,
 .contact-message-kontakt-form input[type="text"] {
     border: 1px solid #cccccc;
 }
+
 .contact-message-kontakt-form #edit-preview,
 .contact-message-kontakt-form #edit-submit {
     padding: .5rem 1rem .5rem 1rem;
     border-radius: 5px;
 }
+
 .contact-message-kontakt-form #edit-submit {
     @apply bg-primary-btn-color;
 }
@@ -97,6 +104,7 @@ a.photoswipe img:hover {
     text-transform: uppercase;
     cursor: pointer;
 }
+
 #user-login-form {
     margin: 0 auto;
     cursor: pointer;
@@ -119,4 +127,40 @@ a.photoswipe img:hover {
     border: 1px solid #666;
     border-radius: 5px;
     padding: .5rem 1rem;
+}
+
+.header-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.go-front {
+    position: relative;
+    z-index: 10;
+}
+
+.region-header {
+    position: relative;
+}
+
+.field--name-field-fi-image img {
+    position: absolute;
+    box-shadow: #c8c8c8 0 2px 32px 32px;
+    animation-name: floating;
+    animation-duration: 5s;
+    border-radius: 10px;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    margin-top: -2rem;
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0, 20px);
+    }
 }
